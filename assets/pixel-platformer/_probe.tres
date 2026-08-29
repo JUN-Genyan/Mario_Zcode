@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" format=3 uid="uid://dj5aiv7gj2pr3"]
+
+[ext_resource type="Texture2D" uid="uid://bgf53ytb42g5r" path="res://assets/pixel-platformer/Tilemap/tilemap.png" id="1_cllo4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cllo4"]
+texture = ExtResource("1_cllo4")
+separation = Vector2i(1, 1)
+texture_region_size = Vector2i(18, 18)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 18, 0, 18, 18, 0, 18)
+
+[resource]
+tile_size = Vector2i(18, 18)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_cllo4")

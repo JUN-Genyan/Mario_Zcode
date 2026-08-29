@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://b0uuv4edcs68o"]
+
+[ext_resource type="Script" uid="uid://bece8v4vkjetg" path="res://scenes/player/player.gd" id="1_dovo2"]
+[ext_resource type="Texture2D" uid="uid://c1eooefqgnyb5" path="res://assets/pixel-platformer/Tilemap/tilemap-characters.png" id="2_gmlin"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvxji"]
+size = Vector2(10, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p47bc"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(75, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75vfm"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0owmy"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(50, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qek5x"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(25, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gtgg"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(50, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h17s1"]
+atlas = ExtResource("2_gmlin")
+region = Rect2(75, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_je7p5"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p47bc")
+}],
+"loop": 1,
+"name": &"fall",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75vfm")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0owmy")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qek5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gtgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h17s1")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fm80t"]
+size = Vector2(12, 14)
+
+[node name="Player" type="CharacterBody2D" unique_id=1131051083]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_dovo2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1507009353]
+shape = SubResource("RectangleShape2D_lvxji")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1807295724]
+sprite_frames = SubResource("SpriteFrames_je7p5")
+animation = &"idle"
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1982528251]
+collision_layer = 0
+collision_mask = 8
+
+[node name="HurtboxShape" type="CollisionShape2D" parent="Hurtbox" unique_id=54190041]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_fm80t")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1400899516]
+limit_left = 0
+limit_top = 0
+limit_right = 1080
+limit_bottom = 540
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0

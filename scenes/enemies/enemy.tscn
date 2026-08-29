@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dh72hhlrgktpv"]
+
+[ext_resource type="Script" uid="uid://bnceu3y1327hx" path="res://scenes/enemies/enemy.gd" id="1_8e3ao"]
+[ext_resource type="Texture2D" uid="uid://c1eooefqgnyb5" path="res://assets/pixel-platformer/Tilemap/tilemap-characters.png" id="2_38ino"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcftc"]
+size = Vector2(14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lu5c6"]
+atlas = ExtResource("2_38ino")
+region = Rect2(50, 25, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb6gf"]
+atlas = ExtResource("2_38ino")
+region = Rect2(75, 25, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jt03m"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lu5c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb6gf")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="Image" id="Image_n7575"]
+data = {
+"data": PackedByteArray(255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255),
+"format": "RGBA8",
+"height": 4,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id="ImageTexture_qch6t"]
+image = SubResource("Image_n7575")
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1741229194]
+collision_layer = 8
+script = ExtResource("1_8e3ao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=116906481]
+shape = SubResource("RectangleShape2D_fcftc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=240013060]
+sprite_frames = SubResource("SpriteFrames_jt03m")
+animation = &"walk"
+
+[node name="EdgeCheck" type="RayCast2D" parent="." unique_id=1286613017]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=891522344]
+
+[node name="Puff" type="CPUParticles2D" parent="." unique_id=662730089]
+position = Vector2(0, -2)
+emitting = false
+amount = 10
+texture = SubResource("ImageTexture_qch6t")
+lifetime = 0.45
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, -1)
+spread = 75.0
+gravity = Vector2(0, 260)
+initial_velocity_min = 40.0
+initial_velocity_max = 95.0
+scale_amount_max = 2.2

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d4acqrivwxsub"]
+
+[ext_resource type="Script" uid="uid://vt311rep085" path="res://scenes/items/block.gd" id="1_b1gsm"]
+[ext_resource type="Texture2D" uid="uid://bgf53ytb42g5r" path="res://assets/pixel-platformer/Tilemap/tilemap.png" id="2_nuvdo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nv5bi"]
+atlas = ExtResource("2_nuvdo")
+region = Rect2(171, 19, 18, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cogy3"]
+size = Vector2(18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0wwj"]
+atlas = ExtResource("2_nuvdo")
+region = Rect2(152, 19, 18, 18)
+
+[node name="Block" type="StaticBody2D" unique_id=1732240213]
+collision_mask = 0
+script = ExtResource("1_b1gsm")
+used_texture = SubResource("AtlasTexture_nv5bi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=652896950]
+shape = SubResource("RectangleShape2D_cogy3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=883446962]
+texture = SubResource("AtlasTexture_g0wwj")

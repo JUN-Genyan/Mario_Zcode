@@ -1,0 +1,254 @@
+[gd_scene format=4 uid="uid://cpr6icngqw37q"]
+
+[ext_resource type="Script" uid="uid://bsl2ff55xqp16" path="res://scenes/levels/level_1.gd" id="1_dga24"]
+[ext_resource type="TileSet" uid="uid://ceo6vmm1x6ag0" path="res://assets/pixel-platformer/tile_set.tres" id="2_qxy0u"]
+[ext_resource type="PackedScene" uid="uid://cmymodcrvauyg" path="res://scenes/items/coin.tscn" id="3_excbq"]
+[ext_resource type="PackedScene" uid="uid://dhv7qehyi132t" path="res://scenes/objects/platform.tscn" id="4_iav0o"]
+[ext_resource type="PackedScene" uid="uid://d4acqrivwxsub" path="res://scenes/items/block.tscn" id="5_dnkej"]
+[ext_resource type="PackedScene" uid="uid://dh72hhlrgktpv" path="res://scenes/enemies/enemy.tscn" id="6_mm8aj"]
+[ext_resource type="PackedScene" uid="uid://bgdr5coqvyj36" path="res://scenes/objects/flag.tscn" id="7_wtwp4"]
+[ext_resource type="PackedScene" uid="uid://b0uuv4edcs68o" path="res://scenes/player/player.tscn" id="8_iwr0g"]
+[ext_resource type="PackedScene" uid="uid://bwyt12yvepnvb" path="res://scenes/ui/hud.tscn" id="9_bahl2"]
+[ext_resource type="PackedScene" uid="uid://djdmtbkmobt5e" path="res://scenes/ui/pause_menu.tscn" id="10_qxy0u"]
+
+[node name="Level1" type="Node2D" unique_id=1196870426]
+script = ExtResource("1_dga24")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=431679975]
+tile_map_data = PackedByteArray("AAAAABoAAAACAAAAAAABABoAAAABAAAAAAACABoAAAAAAAAAAAADABoAAAADAAAAAAAEABoAAAACAAAAAAAFABoAAAABAAAAAAAGABoAAAAAAAAAAAAHABoAAAADAAAAAAAIABoAAAACAAAAAAAJABoAAAABAAAAAAAKABoAAAAAAAAAAAALABoAAAADAAAAAAAMABoAAAACAAAAAAANABoAAAABAAAAAAAOABoAAAAAAAAAAAAPABoAAAADAAAAAAAQABoAAAACAAAAAAARABoAAAABAAAAAAASABoAAAAAAAAAAAATABoAAAADAAAAAAAUABoAAAACAAAAAAAVABoAAAABAAAAAAAWABoAAAAAAAAAAAAXABoAAAADAAAAAAAbABoAAAADAAAAAAAcABoAAAACAAAAAAAdABoAAAABAAAAAAAeABoAAAAAAAAAAAAfABoAAAADAAAAAAAgABoAAAACAAAAAAAhABoAAAABAAAAAAAiABoAAAAAAAAAAAAjABoAAAADAAAAAAAkABoAAAACAAAAAAAlABoAAAABAAAAAAAmABoAAAAAAAAAAAAnABoAAAADAAAAAAAoABoAAAACAAAAAAApABoAAAABAAAAAAAqABoAAAAAAAAAAAArABoAAAADAAAAAAAsABoAAAACAAAAAAAwABoAAAACAAAAAAAxABoAAAABAAAAAAAyABoAAAAAAAAAAAAzABoAAAADAAAAAAA0ABoAAAACAAAAAAA1ABoAAAABAAAAAAA2ABoAAAAAAAAAAAA3ABoAAAADAAAAAAA4ABoAAAACAAAAAAA5ABoAAAABAAAAAAA6ABoAAAAAAAAAAAA7ABoAAAADAAAAAAAAABsAAAARAAEAAAABABsAAAATAAEAAAACABsAAAASAAEAAAADABsAAAARAAEAAAAEABsAAAATAAEAAAAFABsAAAASAAEAAAAGABsAAAARAAEAAAAHABsAAAATAAEAAAAIABsAAAASAAEAAAAJABsAAAARAAEAAAAKABsAAAATAAEAAAALABsAAAASAAEAAAAMABsAAAARAAEAAAANABsAAAATAAEAAAAOABsAAAASAAEAAAAPABsAAAARAAEAAAAQABsAAAATAAEAAAARABsAAAASAAEAAAASABsAAAARAAEAAAATABsAAAATAAEAAAAUABsAAAASAAEAAAAVABsAAAARAAEAAAAWABsAAAATAAEAAAAXABsAAAASAAEAAAAbABsAAAARAAEAAAAcABsAAAATAAEAAAAdABsAAAASAAEAAAAeABsAAAARAAEAAAAfABsAAAATAAEAAAAgABsAAAASAAEAAAAhABsAAAARAAEAAAAiABsAAAATAAEAAAAjABsAAAASAAEAAAAkABsAAAARAAEAAAAlABsAAAATAAEAAAAmABsAAAASAAEAAAAnABsAAAARAAEAAAAoABsAAAATAAEAAAApABsAAAASAAEAAAAqABsAAAARAAEAAAArABsAAAATAAEAAAAsABsAAAASAAEAAAAwABsAAAARAAEAAAAxABsAAAATAAEAAAAyABsAAAASAAEAAAAzABsAAAARAAEAAAA0ABsAAAATAAEAAAA1ABsAAAASAAEAAAA2ABsAAAARAAEAAAA3ABsAAAATAAEAAAA4ABsAAAASAAEAAAA5ABsAAAARAAEAAAA6ABsAAAATAAEAAAA7ABsAAAASAAEAAAAAABwAAAATAAEAAAABABwAAAASAAEAAAACABwAAAARAAEAAAADABwAAAATAAEAAAAEABwAAAASAAEAAAAFABwAAAARAAEAAAAGABwAAAATAAEAAAAHABwAAAASAAEAAAAIABwAAAARAAEAAAAJABwAAAATAAEAAAAKABwAAAASAAEAAAALABwAAAARAAEAAAAMABwAAAATAAEAAAANABwAAAASAAEAAAAOABwAAAARAAEAAAAPABwAAAATAAEAAAAQABwAAAASAAEAAAARABwAAAARAAEAAAASABwAAAATAAEAAAATABwAAAASAAEAAAAUABwAAAARAAEAAAAVABwAAAATAAEAAAAWABwAAAASAAEAAAAXABwAAAARAAEAAAAbABwAAAATAAEAAAAcABwAAAASAAEAAAAdABwAAAARAAEAAAAeABwAAAATAAEAAAAfABwAAAASAAEAAAAgABwAAAARAAEAAAAhABwAAAATAAEAAAAiABwAAAASAAEAAAAjABwAAAARAAEAAAAkABwAAAATAAEAAAAlABwAAAASAAEAAAAmABwAAAARAAEAAAAnABwAAAATAAEAAAAoABwAAAASAAEAAAApABwAAAARAAEAAAAqABwAAAATAAEAAAArABwAAAASAAEAAAAsABwAAAARAAEAAAAwABwAAAATAAEAAAAxABwAAAASAAEAAAAyABwAAAARAAEAAAAzABwAAAATAAEAAAA0ABwAAAASAAEAAAA1ABwAAAARAAEAAAA2ABwAAAATAAEAAAA3ABwAAAASAAEAAAA4ABwAAAARAAEAAAA5ABwAAAATAAEAAAA6ABwAAAASAAEAAAA7ABwAAAARAAEAAAAAAB0AAAASAAEAAAABAB0AAAARAAEAAAACAB0AAAATAAEAAAADAB0AAAASAAEAAAAEAB0AAAARAAEAAAAFAB0AAAATAAEAAAAGAB0AAAASAAEAAAAHAB0AAAARAAEAAAAIAB0AAAATAAEAAAAJAB0AAAASAAEAAAAKAB0AAAARAAEAAAALAB0AAAATAAEAAAAMAB0AAAASAAEAAAANAB0AAAARAAEAAAAOAB0AAAATAAEAAAAPAB0AAAASAAEAAAAQAB0AAAARAAEAAAARAB0AAAATAAEAAAASAB0AAAASAAEAAAATAB0AAAARAAEAAAAUAB0AAAATAAEAAAAVAB0AAAASAAEAAAAWAB0AAAARAAEAAAAXAB0AAAATAAEAAAAbAB0AAAASAAEAAAAcAB0AAAARAAEAAAAdAB0AAAATAAEAAAAeAB0AAAASAAEAAAAfAB0AAAARAAEAAAAgAB0AAAATAAEAAAAhAB0AAAASAAEAAAAiAB0AAAARAAEAAAAjAB0AAAATAAEAAAAkAB0AAAASAAEAAAAlAB0AAAARAAEAAAAmAB0AAAATAAEAAAAnAB0AAAASAAEAAAAoAB0AAAARAAEAAAApAB0AAAATAAEAAAAqAB0AAAASAAEAAAArAB0AAAARAAEAAAAsAB0AAAATAAEAAAAwAB0AAAASAAEAAAAxAB0AAAARAAEAAAAyAB0AAAATAAEAAAAzAB0AAAASAAEAAAA0AB0AAAARAAEAAAA1AB0AAAATAAEAAAA2AB0AAAASAAEAAAA3AB0AAAARAAEAAAA4AB0AAAATAAEAAAA5AB0AAAASAAEAAAA6AB0AAAARAAEAAAA7AB0AAAATAAEAAAA=")
+tile_set = ExtResource("2_qxy0u")
+
+[node name="Parallax" type="ParallaxBackground" parent="." unique_id=388813822]
+
+[node name="CloudLayer" type="ParallaxLayer" parent="Parallax" unique_id=138878457]
+motion_scale = Vector2(0.25, 1)
+motion_mirroring = Vector2(960, 0)
+
+[node name="@Polygon2D@63846" type="Polygon2D" parent="Parallax/CloudLayer" unique_id=905174940]
+position = Vector2(140, 110)
+scale = Vector2(1.2, 1.2)
+color = Color(1, 1, 1, 0.92)
+polygon = PackedVector2Array(-30, 10, -30, 0, -20, -8, -10, -6, -4, -14, 8, -14, 14, -6, 26, -4, 30, 2, 30, 10)
+
+[node name="@Polygon2D@63847" type="Polygon2D" parent="Parallax/CloudLayer" unique_id=105655120]
+position = Vector2(420, 70)
+color = Color(1, 1, 1, 0.92)
+polygon = PackedVector2Array(-30, 10, -30, 0, -20, -8, -10, -6, -4, -14, 8, -14, 14, -6, 26, -4, 30, 2, 30, 10)
+
+[node name="@Polygon2D@63848" type="Polygon2D" parent="Parallax/CloudLayer" unique_id=1820121809]
+position = Vector2(700, 130)
+scale = Vector2(1.4, 1.4)
+color = Color(1, 1, 1, 0.92)
+polygon = PackedVector2Array(-30, 10, -30, 0, -20, -8, -10, -6, -4, -14, 8, -14, 14, -6, 26, -4, 30, 2, 30, 10)
+
+[node name="@Polygon2D@63849" type="Polygon2D" parent="Parallax/CloudLayer" unique_id=1107865462]
+position = Vector2(880, 90)
+color = Color(1, 1, 1, 0.92)
+polygon = PackedVector2Array(-30, 10, -30, 0, -20, -8, -10, -6, -4, -14, 8, -14, 14, -6, 26, -4, 30, 2, 30, 10)
+
+[node name="HillLayer" type="ParallaxLayer" parent="Parallax" unique_id=1073284523]
+motion_scale = Vector2(0.55, 1)
+motion_mirroring = Vector2(960, 0)
+
+[node name="@Polygon2D@63850" type="Polygon2D" parent="Parallax/HillLayer" unique_id=1926128019]
+position = Vector2(150, 468)
+color = Color(0.2, 0.68, 0.32, 1)
+polygon = PackedVector2Array(-130, 0, -128.02501, -15.628336, -122.16004, -30.781813, -112.583305, -45, -99.58578, -57.850883, -83.562386, -68.944, -65, -77.94228, -44.46262, -84.572334, -22.574263, -88.6327, -7.959941e-15, -90, 22.574263, -88.6327, 44.46262, -84.572334, 65, -77.94228, 83.562386, -68.944, 99.58578, -57.850883, 112.583305, -45, 122.16004, -30.781813, 128.02501, -15.628336, 130, -1.1021457e-14)
+
+[node name="@Polygon2D@63851" type="Polygon2D" parent="Parallax/HillLayer" unique_id=117087990]
+position = Vector2(480, 468)
+color = Color(0.2, 0.68, 0.32, 1)
+polygon = PackedVector2Array(-100, 0, -98.480774, -10.418891, -93.96926, -20.521208, -86.60254, -30, -76.60445, -38.567257, -64.27876, -45.962666, -50, -51.961525, -34.202015, -56.381557, -17.364819, -59.088467, -6.1230318e-15, -60, 17.364819, -59.088467, 34.202015, -56.381557, 50, -51.961525, 64.27876, -45.962666, 76.60445, -38.567257, 86.60254, -30, 93.96926, -20.521208, 98.480774, -10.418891, 100, -7.347638e-15)
+
+[node name="@Polygon2D@63852" type="Polygon2D" parent="Parallax/HillLayer" unique_id=1179777384]
+position = Vector2(820, 468)
+color = Color(0.2, 0.68, 0.32, 1)
+polygon = PackedVector2Array(-150, 0, -147.72116, -19.1013, -140.95389, -37.622215, -129.90381, -55, -114.90667, -70.706635, -96.418144, -84.264885, -75, -95.262794, -51.30302, -103.36619, -26.047226, -108.32885, -9.184548e-15, -110, 26.047226, -108.32885, 51.30302, -103.36619, 75, -95.262794, 96.418144, -84.264885, 114.90667, -70.706635, 129.90381, -55, 140.95389, -37.622215, 147.72116, -19.1013, 150, -1.347067e-14)
+
+[node name="Coin1" parent="." unique_id=1601711679 instance=ExtResource("3_excbq")]
+position = Vector2(657, 261)
+
+[node name="Coin2" parent="." unique_id=1174630653 instance=ExtResource("3_excbq")]
+position = Vector2(675, 261)
+
+[node name="Coin3" parent="." unique_id=1015312533 instance=ExtResource("3_excbq")]
+position = Vector2(693, 261)
+
+[node name="Platform1" parent="." unique_id=1263769211 instance=ExtResource("4_iav0o")]
+position = Vector2(657, 279)
+
+[node name="Platform2" parent="." unique_id=2083610230 instance=ExtResource("4_iav0o")]
+position = Vector2(675, 279)
+
+[node name="Platform3" parent="." unique_id=893202869 instance=ExtResource("4_iav0o")]
+position = Vector2(693, 279)
+
+[node name="Coin4" parent="." unique_id=358662683 instance=ExtResource("3_excbq")]
+position = Vector2(567, 315)
+
+[node name="Coin5" parent="." unique_id=215976853 instance=ExtResource("3_excbq")]
+position = Vector2(585, 315)
+
+[node name="Coin6" parent="." unique_id=1066170591 instance=ExtResource("3_excbq")]
+position = Vector2(603, 315)
+
+[node name="QBlock1" parent="." unique_id=1732240213 instance=ExtResource("5_dnkej")]
+position = Vector2(567, 333)
+
+[node name="QBlock2" parent="." unique_id=773909244 instance=ExtResource("5_dnkej")]
+position = Vector2(603, 333)
+
+[node name="Coin7" parent="." unique_id=1120469811 instance=ExtResource("3_excbq")]
+position = Vector2(495, 351)
+
+[node name="Coin8" parent="." unique_id=2108835500 instance=ExtResource("3_excbq")]
+position = Vector2(513, 351)
+
+[node name="Coin9" parent="." unique_id=72510409 instance=ExtResource("3_excbq")]
+position = Vector2(531, 351)
+
+[node name="Platform4" parent="." unique_id=1063509050 instance=ExtResource("4_iav0o")]
+position = Vector2(495, 369)
+
+[node name="Platform5" parent="." unique_id=619206202 instance=ExtResource("4_iav0o")]
+position = Vector2(513, 369)
+
+[node name="Platform6" parent="." unique_id=2143909907 instance=ExtResource("4_iav0o")]
+position = Vector2(531, 369)
+
+[node name="Crate1" parent="." unique_id=1894752136 instance=ExtResource("5_dnkej")]
+position = Vector2(243, 405)
+content = "none"
+
+[node name="QBlock3" parent="." unique_id=479771662 instance=ExtResource("5_dnkej")]
+position = Vector2(261, 405)
+
+[node name="Crate2" parent="." unique_id=583254471 instance=ExtResource("5_dnkej")]
+position = Vector2(279, 405)
+content = "none"
+
+[node name="QBlock4" parent="." unique_id=1741783773 instance=ExtResource("5_dnkej")]
+position = Vector2(297, 405)
+
+[node name="Crate3" parent="." unique_id=1767960863 instance=ExtResource("5_dnkej")]
+position = Vector2(315, 405)
+content = "none"
+
+[node name="Coin10" parent="." unique_id=2130789332 instance=ExtResource("3_excbq")]
+position = Vector2(387, 405)
+
+[node name="Coin11" parent="." unique_id=249355101 instance=ExtResource("3_excbq")]
+position = Vector2(405, 405)
+
+[node name="Coin12" parent="." unique_id=1105127482 instance=ExtResource("3_excbq")]
+position = Vector2(423, 405)
+
+[node name="Coin13" parent="." unique_id=2021365156 instance=ExtResource("3_excbq")]
+position = Vector2(819, 405)
+
+[node name="Coin14" parent="." unique_id=1204399152 instance=ExtResource("3_excbq")]
+position = Vector2(837, 405)
+
+[node name="Coin15" parent="." unique_id=302431875 instance=ExtResource("3_excbq")]
+position = Vector2(855, 405)
+
+[node name="Crate4" parent="." unique_id=2076756241 instance=ExtResource("5_dnkej")]
+position = Vector2(1017, 405)
+content = "none"
+
+[node name="Platform7" parent="." unique_id=1278748544 instance=ExtResource("4_iav0o")]
+position = Vector2(387, 423)
+
+[node name="Platform8" parent="." unique_id=703415481 instance=ExtResource("4_iav0o")]
+position = Vector2(405, 423)
+
+[node name="Platform9" parent="." unique_id=518923815 instance=ExtResource("4_iav0o")]
+position = Vector2(423, 423)
+
+[node name="Platform10" parent="." unique_id=1768071350 instance=ExtResource("4_iav0o")]
+position = Vector2(819, 423)
+
+[node name="Platform11" parent="." unique_id=873757269 instance=ExtResource("4_iav0o")]
+position = Vector2(837, 423)
+
+[node name="Platform12" parent="." unique_id=1182848285 instance=ExtResource("4_iav0o")]
+position = Vector2(855, 423)
+
+[node name="Crate5" parent="." unique_id=1186775409 instance=ExtResource("5_dnkej")]
+position = Vector2(999, 423)
+content = "none"
+
+[node name="Crate6" parent="." unique_id=1316183377 instance=ExtResource("5_dnkej")]
+position = Vector2(1017, 423)
+content = "none"
+
+[node name="Coin16" parent="." unique_id=784625128 instance=ExtResource("3_excbq")]
+position = Vector2(117, 449)
+
+[node name="Coin17" parent="." unique_id=187524959 instance=ExtResource("3_excbq")]
+position = Vector2(153, 449)
+
+[node name="Coin18" parent="." unique_id=1978383403 instance=ExtResource("3_excbq")]
+position = Vector2(189, 449)
+
+[node name="Coin19" parent="." unique_id=1822714354 instance=ExtResource("3_excbq")]
+position = Vector2(441, 449)
+
+[node name="Coin20" parent="." unique_id=127629815 instance=ExtResource("3_excbq")]
+position = Vector2(459, 449)
+
+[node name="Coin21" parent="." unique_id=1336765776 instance=ExtResource("3_excbq")]
+position = Vector2(477, 449)
+
+[node name="Crate7" parent="." unique_id=2021599371 instance=ExtResource("5_dnkej")]
+position = Vector2(981, 441)
+content = "none"
+
+[node name="Crate8" parent="." unique_id=2103110771 instance=ExtResource("5_dnkej")]
+position = Vector2(999, 441)
+content = "none"
+
+[node name="Crate9" parent="." unique_id=447484712 instance=ExtResource("5_dnkej")]
+position = Vector2(1017, 441)
+content = "none"
+
+[node name="Enemy1" parent="." unique_id=1741229194 instance=ExtResource("6_mm8aj")]
+position = Vector2(189, 459)
+
+[node name="Enemy2" parent="." unique_id=425174750 instance=ExtResource("6_mm8aj")]
+position = Vector2(369, 459)
+
+[node name="Enemy3" parent="." unique_id=1481580230 instance=ExtResource("6_mm8aj")]
+position = Vector2(603, 459)
+
+[node name="Enemy4" parent="." unique_id=1203687644 instance=ExtResource("6_mm8aj")]
+position = Vector2(729, 459)
+
+[node name="Enemy5" parent="." unique_id=1134141496 instance=ExtResource("6_mm8aj")]
+position = Vector2(927, 459)
+
+[node name="Crate10" parent="." unique_id=545908673 instance=ExtResource("5_dnkej")]
+position = Vector2(963, 459)
+content = "none"
+
+[node name="Crate11" parent="." unique_id=934028819 instance=ExtResource("5_dnkej")]
+position = Vector2(981, 459)
+content = "none"
+
+[node name="Crate12" parent="." unique_id=1790478617 instance=ExtResource("5_dnkej")]
+position = Vector2(999, 459)
+content = "none"
+
+[node name="Crate13" parent="." unique_id=1869085069 instance=ExtResource("5_dnkej")]
+position = Vector2(1017, 459)
+content = "none"
+
+[node name="Flag" parent="." unique_id=1792596606 instance=ExtResource("7_wtwp4")]
+position = Vector2(1053, 468)
+
+[node name="Player" parent="." unique_id=1131051083 instance=ExtResource("8_iwr0g")]
+position = Vector2(45, 459)
+
+[node name="HUD" parent="." unique_id=75240114 instance=ExtResource("9_bahl2")]
+
+[node name="PauseMenu" parent="." unique_id=331223341 instance=ExtResource("10_qxy0u")]

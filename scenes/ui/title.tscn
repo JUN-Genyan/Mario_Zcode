@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bl1xba4j0an0"]
+
+[ext_resource type="Script" uid="uid://bph2sn2k5pby5" path="res://scenes/ui/title.gd" id="1_t6us6"]
+
+[node name="TitleScreen" type="Control" unique_id=2073624788]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t6us6")
+
+[node name="Background" type="ColorRect" parent="." unique_id=558274766]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.36, 0.58, 0.99, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=2079002547]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -150.0
+offset_right = 420.0
+offset_bottom = -60.0
+theme_override_colors/font_outline_color = Color(0.1, 0.1, 0.12, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 64
+text = "MARIO ZCODE"
+horizontal_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="." unique_id=299342221]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -50.0
+offset_right = 420.0
+offset_bottom = -14.0
+theme_override_colors/font_outline_color = Color(0.1, 0.1, 0.12, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 20
+text = "类 Mario 平台跳跃 · Godot 4.7 + Fennara MCP 构建"
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="." unique_id=2046891663]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 40.0
+offset_right = 300.0
+offset_bottom = 90.0
+theme_override_colors/font_outline_color = Color(0.1, 0.1, 0.12, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 30
+text = "按 空格键 开始游戏"
+horizontal_alignment = 1
+
+[node name="ControlsLabel" type="Label" parent="." unique_id=1050461985]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -470.0
+offset_top = -70.0
+offset_right = 470.0
+offset_bottom = -36.0
+theme_override_colors/font_outline_color = Color(0.1, 0.1, 0.12, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = "A/D 或 ←/→ 移动    空格/W/↑ 跳跃    R 重开    Esc 暂停"
+horizontal_alignment = 1
+
+[node name="QuitHint" type="Label" parent="." unique_id=841614022]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -32.0
+offset_right = 300.0
+offset_bottom = -8.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.75)
+theme_override_colors/font_outline_color = Color(0.1, 0.1, 0.12, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 14
+text = "本界面按 Esc 退出游戏"
+horizontal_alignment = 1
